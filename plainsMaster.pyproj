@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7afecd9e-90a7-4504-8d31-91a175522a50}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>S_main.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</InterpreterId>
+    <InterpreterVersion>3.5</InterpreterVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="dew.png" />
+    <Content Include="goomba.png" />
+    <Content Include="platform.png" />
+    <Content Include="Textures\Buttons\change_team.png" />
+    <Content Include="Textures\Ground Textures\floor tile corner connector.png" />
+    <Content Include="Textures\Ground Textures\floor tile corner.png" />
+    <Content Include="Textures\Ground Textures\floor tile full grass around.png" />
+    <Content Include="Textures\Ground Textures\floor tile no grass.png" />
+    <Content Include="Textures\Ground Textures\floor tile three parts grass.png" />
+    <Content Include="Textures\Ground Textures\floor tile two parts grass.png" />
+    <Content Include="Textures\Ground Textures\standard floor tile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="button.py" />
+    <Compile Include="camera.py" />
+    <Compile Include="collisionHandler.py" />
+    <Compile Include="courseRunner.py" />
+    <Compile Include="C_entityController.py" />
+    <Compile Include="C_gameMain.py" />
+    <Compile Include="C_lobby.py" />
+    <Compile Include="C_lobbyInputHandler.py" />
+    <Compile Include="C_main.py" />
+    <Compile Include="C_main2.py" />
+    <Compile Include="C_networkHandler.py" />
+    <Compile Include="C_plainsmasterFunctionality.py" />
+    <Compile Include="C_serverMessageTranslator.py" />
+    <Compile Include="C_serverUDPConnector.py" />
+    <Compile Include="C_textInput.py" />
+    <Compile Include="DEBUGCLASS.py" />
+    <Compile Include="entity.py" />
+    <Compile Include="goomba.py" />
+    <Compile Include="levelLoader.py" />
+    <Compile Include="overtakeableEntities.py" />
+    <Compile Include="physicsEntities.py" />
+    <Compile Include="platform.py" />
+    <Compile Include="stearableEntities.py" />
+    <Compile Include="S_clientUDPConnector.py" />
+    <Compile Include="S_gameMain.py" />
+    <Compile Include="S_lobby.py" />
+    <Compile Include="S_main.py" />
+    <Compile Include="S_networkHandler.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Textures\" />
+    <Folder Include="Textures\Buttons" />
+    <Folder Include="Textures\Ground Textures" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="{2af0f10d-7135-4994-9156-5d01c9c11b7e}\3.5" />
+  </ItemGroup>
+  <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
+</Project>
